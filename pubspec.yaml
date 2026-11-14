@@ -1,0 +1,56 @@
+name: idara
+description: "إدارة ممهدون — تطبيق إدارة مكتبة ممهدون لمالك المكتبة وموظفيه."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  supabase_flutter: ^2.10.0
+  provider: ^6.1.5
+  shared_preferences: ^2.5.3
+  url_launcher: ^6.3.2
+  pdf: ^3.11.3
+  printing: ^5.14.2
+  image_picker: ^1.2.0
+  image: ^4.5.0
+  audioplayers: ^6.5.1
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/branding/splash_logo.png
+    - assets/branding/logo_mark.png
+    - assets/branding/logo_receipt.png
+    - assets/sounds/
+
+  fonts:
+    - family: Amiri
+      fonts:
+        - asset: assets/fonts/amiri_regular.ttf
+        - asset: assets/fonts/amiri_bold.ttf
+          weight: 700
+    - family: Tajawal
+      fonts:
+        - asset: assets/fonts/tajawal_regular.ttf
+        - asset: assets/fonts/tajawal_medium.ttf
+          weight: 500
+        - asset: assets/fonts/tajawal_bold.ttf
+          weight: 700
+
+# image 4.11.0 calls ZLibDecoder.decodeLazy, which the resolved archive release does not have.
+dependency_overrides:
+  image: 4.10.1
